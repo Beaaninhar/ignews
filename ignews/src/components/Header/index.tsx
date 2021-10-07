@@ -1,14 +1,24 @@
-import styles from './styles.module.scss'
+/* eslint-disable @next/next/no-html-link-for-pages */
+
+
+import { SingInButton } from '../SignInButton';
+
+import styles from './styles.module.scss';
 
 export function Header() {
     return (
         <header className={styles.headerContainer}>
-            <div className={styles.headerContest}>
-                <img src="/images/logo.svg" alt="Logo ig.news" />
+            <div className={styles.headerContent}>
+                <img src='/images/logo.svg' alt='ig.news' />
                 <nav>
-                    <a href="#" className={styles.active}>Home</a>
-                    <a href="#">Posts</a>
+                    <a href="/">
+                        <a>Home</a>
+                    </a>
+                    <a href="#">
+                        <a>Posts</a>
+                    </a>
                 </nav>
+                <SingInButton />
             </div>
         </header>
     )
